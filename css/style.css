@@ -565,7 +565,12 @@ h1, h2, h3, h4 {
   mix-blend-mode: multiply;
   pointer-events: none;
 }
-.project-card-watermark--square { width: 35%; }
+.project-card-watermark--square {
+  width: 35%;
+  top: -1.75rem;
+  right: 3.75rem;
+  opacity: 0.26;
+}
 .project-card:hover { background: var(--bg-card); }
 .project-card:hover::before { height: 100%; }
 
