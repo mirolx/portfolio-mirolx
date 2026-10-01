@@ -543,6 +543,7 @@ h1, h2, h3, h4 {
   padding: 3rem 2.75rem;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   transition: background var(--t-base);
 }
 .project-card::before {
@@ -553,6 +554,18 @@ h1, h2, h3, h4 {
   background: var(--accent);
   transition: height 0.5s ease;
 }
+.project-card-watermark {
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  width: 62.5%;
+  height: auto;
+  z-index: -1;
+  opacity: 0.16;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.project-card-watermark--square { width: 35%; }
 .project-card:hover { background: var(--bg-card); }
 .project-card:hover::before { height: 100%; }
 
